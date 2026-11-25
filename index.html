@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06111c">
+
+  <title>After Hours — Tutustumiskysely</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="background-image"></div>
+  <div class="background-overlay"></div>
+  <div class="background-glow"></div>
+
+  <main class="site-shell">
+
+    <!-- HEADER -->
+    <header class="header">
+      <a href="#" class="brand" aria-label="After Hours">
+        <span class="brand-icon">A</span>
+        <span class="brand-name">AFTER <span>HOURS</span></span>
+      </a>
+
+      <div class="header-meta">
+        <span class="status-dot"></span>
+        <span>20 kysymystä</span>
+      </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro" id="intro">
+
+      <div class="intro-copy">
+        <p class="eyebrow">
+          <span>01</span>
+          <span class="eyebrow-line"></span>
+          A MOMENT OF CURIOSITY
+        </p>
+
+        <h1>
+          Kaikki ei näy<br>
+          <em>ensimmäisellä</em><br>
+          vilkaisulla.
+        </h1>
+
+        <p class="intro-description">
+          Kaksikymmentä kysymystä. Pieniä valintoja,
+          ajatuksia ja asioita, joita ei aina tule
+          sanottua ääneen.
+        </p>
+
+        <div class="intro-actions">
+          <button class="button button-primary" id="startBtn">
+            Aloita kysely
+            <span>↗</span>
+          </button>
+
+          <span class="intro-duration">
+            NOIN 4 MINUUTTIA
+          </span>
+        </div>
+
+        <div class="intro-note">
+          <span class="note-star">✦</span>
+          Ei oikeita tai vääriä vastauksia.
+        </div>
+      </div>
+
+      <div class="intro-visual" aria-hidden="true">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+        <div class="visual-orbit orbit-three"></div>
+
+        <div class="visual-center">
+          <span>A</span>
+          <span class="visual-center-small">H</span>
+        </div>
+
+        <div class="visual-caption">
+          <span>A QUIET KIND</span>
+          <span>OF CONNECTION</span>
+        </div>
+
+        <div class="visual-number">
+          01 <span>— 20</span>
+        </div>
+      </div>
+
+      <div class="intro-bottom">
+        <span>AFTER HOURS</span>
+        <span class="bottom-divider"></span>
+        <span>YOUR INNER WORLD</span>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="quiz hidden" id="quiz">
+
+      <div class="quiz-top">
+        <div>
+          <p class="eyebrow">
+            AFTER HOURS
+            <span class="eyebrow-line"></span>
+            PERSONALITY NOTES
+          </p>
+
+          <h2>
+            Vastaa omalla<br>
+            <em>tavallasi.</em>
+          </h2>
+
+          <p class="quiz-description">
+            Valitse yksi tai useampi vaihtoehto.
+            Vastaa fiiliksen mukaan.
+          </p>
+        </div>
+
+        <div class="quiz-counter">
+          <span id="questionNumber">01</span>
+          <span class="counter-divider">/</span>
+          <span id="totalQuestions">20</span>
+        </div>
+      </div>
+
+      <div class="progress-area">
+        <div class="progress-meta">
+          <span id="progressLabel">QUESTION 01</span>
+          <span id="progressText">5% valmis</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <article class="question-card">
+        <div class="question-card-top">
+          <span class="question-category" id="questionTag">
+            LIGHT
+          </span>
+
+          <span class="question-label">
+            KYSYMYS <span id="panelIndex">01</span>
+          </span>
+        </div>
+
+        <div class="question-content">
+          <h3 id="questionText">
+            Kysymys tulee tähän.
+          </h3>
+
+          <p class="question-hint">
+            Voit valita useamman vaihtoehdon.
+          </p>
+
+          <div class="answers" id="answers"></div>
+
+          <p class="question-error" id="questionError" role="alert"></p>
+        </div>
+
+        <div class="question-footer">
+          <button class="button button-ghost" id="backBtn" disabled>
+            <span>←</span>
+            Edellinen
+          </button>
+
+          <button class="button button-primary" id="nextBtn">
+            Seuraava
+            <span>→</span>
+          </button>
+        </div>
+      </article>
+
+      <div class="quiz-bottom">
+        <span>TRUST YOUR INSTINCT</span>
+        <span>AFTER HOURS ✦</span>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section class="result hidden" id="result">
+
+      <div class="result-heading">
+        <p class="eyebrow">
+          THE LAST PAGE
+          <span class="eyebrow-line"></span>
+          YOUR AFTER HOURS PROFILE
+        </p>
+
+        <h2 id="resultTitle">
+          Sinussa on monta puolta.
+        </h2>
+
+        <p class="result-description" id="resultText"></p>
+
+        <blockquote id="resultQuote"></blockquote>
+      </div>
+
+      <div class="result-visual">
+        <div class="result-orbit"></div>
+        <div class="result-orbit result-orbit-small"></div>
+
+        <div class="result-monogram">
+          A<span>H</span>
+        </div>
+
+        <p>YOUR INNER WORLD</p>
+        <span class="result-complete">20 / 20 COMPLETED</span>
+      </div>
+
+      <!-- SHARE CODE -->
+      <div class="compatibility-section">
+
+        <div class="section-heading">
+          <p class="eyebrow">
+            TWO WORLDS
+            <span class="eyebrow-line"></span>
+            ONE CONNECTION
+          </p>
+
+          <h2>
+            Vertailkaa<br>
+            <em>vastauksianne.</em>
+          </h2>
+
+          <p>
+            Jaa oma koodisi toiselle henkilölle.
+            Kun molemmat ovat vastanneet kyselyyn,
+            voitte nähdä vastaustenne yhteensopivuuden.
+          </p>
+        </div>
+
+        <div class="code-grid">
+
+          <div class="code-card">
+            <div class="code-card-heading">
+              <span class="card-number">01</span>
+              <div>
+                <h3>Sinun koodisi</h3>
+                <p>Jaa tämä toiselle henkilölle.</p>
+              </div>
+            </div>
+
+            <div class="code-display" id="myCode"></div>
+
+            <button class="button button-secondary" id="copyCodeBtn">
+              Kopioi koodi
+              <span>↗</span>
+            </button>
+
+            <p class="status-message" id="shareStatus" role="status"></p>
+          </div>
+
+          <div class="code-card">
+            <div class="code-card-heading">
+              <span class="card-number">02</span>
+              <div>
+                <h3>Toisen henkilön koodi</h3>
+                <p>Liitä tähän saamasi koodi.</p>
+              </div>
+            </div>
+
+            <textarea
+              id="otherCode"
+              placeholder="Liitä vertailukoodi tähän..."
+              rows="3"
+              spellcheck="false"
+            ></textarea>
+
+            <button class="button button-primary" id="compareBtn">
+              Laske yhteensopivuus
+              <span>↗</span>
+            </button>
+
+            <p class="error-message" id="compareError" role="alert"></p>
+          </div>
+
+        </div>
+
+        <!-- COMPATIBILITY RESULT -->
+        <div class="compatibility-result hidden" id="compatibilityResult">
+
+          <div class="compatibility-score">
+            <p class="score-label">YOUR CONNECTION</p>
+
+            <div class="score-number" id="compatibilityPercent">
+              0%
+            </div>
+
+            <p class="score-description" id="compatibilityDescription"></p>
+          </div>
+
+          <div class="match-stats">
+            <div class="match-stat">
+              <span class="match-dot match-dot-same"></span>
+              <span>Samankaltaiset</span>
+              <strong id="sameCount">0</strong>
+            </div>
+
+            <div class="match-stat">
+              <span class="match-dot match-dot-different"></span>
+              <span>Erilaiset</span>
+              <strong id="differentCount">0</strong>
+            </div>
+          </div>
+
+          <div class="comparison-list" id="comparisonList"></div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="button button-primary" id="shareBtn">
+          Jaa tulos
+          <span>↗</span>
+        </button>
+
+        <button class="button button-ghost" id="restartBtn">
+          Aloita alusta ↻
+        </button>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>AFTER HOURS <span>/</span> A QUIET KIND OF CONNECTION</span>
+      <span>MADE FOR THE CURIOUS <span class="footer-star">✦</span></span>
+    </footer>
+
+  </main>
+</body>
+</html>
